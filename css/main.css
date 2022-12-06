@@ -1,0 +1,360 @@
+/* * {
+    outline: 1px solid #2E8B57;
+} */
+
+
+/* {header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.header.on {
+    background: hsla(0, 0%, 100%, .9);
+    border-bottom: 1px solid #e5e5e5;
+    backdrop-filter: blur(5px);
+}
+
+.header .inner {
+    width: 1200px;
+    margin: 0 auto;
+
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_logo {
+    width: 120px;
+}
+
+.header_logo img {
+    max-width: 100%;
+    margin: 3px 0 0 0;
+}
+
+.header ul {
+    display: flex;
+    gap: 30px;
+}
+
+.header li {
+    position: relative;
+    font-size: 16px;
+    line-height: 45px;
+}
+
+.header li~li::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+    top: 50%;
+    left: -15px;
+    transform: translate(-50%, -50%);
+}
+
+.header .plus {
+    display: flex;
+    gap: 30px;
+}
+
+.header .plus i {
+    position: relative;
+    font-size: 30px;
+    line-height: 45px;
+}
+
+.header .plus i~i::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+    top: 50%;
+    left: -15px;
+    transform: translate(-50%, -50%);
+}
+
+/* header}*/
+
+/* {mainVisual */
+
+.mainSlide {
+    background: url(../img/car-bg.jpg) no-repeat center center/cover;
+}
+
+.mainSlide figure {
+    height: 950px;
+    position: relative;
+}
+
+.mainSlide .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.mainSlide .inner span {
+    display: inline-block;
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+.mainSlide .inner p {
+    font-size: 20px;
+}
+
+.mainSlide figure img {
+    width: 100%;
+    transform: translate(1000px, 0);
+    opacity: 0;
+}
+
+.mainSlide figure.on img {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: transform 1s;
+}
+
+.mainSlide .slick-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* 위에서 하면 안 먹기 때문에 밑으로 다시 써주기 */
+    transform: translate(-50%, -50%);
+    z-index: 999;
+
+    background: none;
+    border: none;
+
+    font-size: 0;
+
+    width: 100px;
+    height: 100px;
+
+    border-top: 2px solid rgba(0, 0, 0, 0.5);
+    border-left: 2px solid rgba(0, 0, 0, 0.5);
+
+    display: none;
+}
+
+.mainSlide .slick-prev {
+    transform: translate(-50%, -50%) rotate(-45deg);
+    margin: 0 0 0 -700px;
+}
+
+.mainSlide .slick-next {
+    transform: translate(-50%, -50%) rotate(135deg);
+    margin: 0 0 0 700px;
+}
+
+.mainVisual .mainSlide .slick-dots {
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.mainVisual .mainSlide .slick-dots>li {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #ddd;
+    margin: 0 5px;
+    border-radius: 50%;
+}
+
+.mainVisual .mainSlide .slick-dots>li.slick-active {
+    background: #007fa8;
+}
+
+.mainVisual .mainSlide .slick-dots>li button {
+    display: none;
+}
+
+/* mainVisual} */
+
+/* {mainProduct */
+.main_product .inner {
+    width: 1200px;
+    margin: auto;
+}
+
+.main_product .inner .intro {
+    text-align: center;
+}
+
+.main_product .inner .intro span {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+.main_product .inner .intro p {
+    margin: 0 0 75px 0;
+}
+
+.main_product .inner .desc {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_product .inner .desc .left {
+    width: 550px;
+}
+
+.main_product .inner .desc .right {
+    width: 550px;
+}
+
+.main_product .inner .desc img {
+    width: 100%;
+}
+
+.main_product .inner .right ul {
+    color: #666;
+    display: flex;
+    gap: 30px;
+}
+
+.main_product .inner .blue {
+    color: #007fa8;
+}
+
+.main_product .inner .right li {
+    position: relative;
+}
+
+.main_product .inner .right li~li::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+    top: 50%;
+    left: -15px;
+    transform: translate(-50%, -50%);
+}
+
+.main_product .inner .right span {
+    position: absolute;
+    top: 50px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.main_product .inner .remainder {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.main_product .inner .remainder img {
+    margin: 0 0 30px 0;
+}
+
+.main_product .inner .remainder p {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* mainProduct} */
+
+/* {mainIntroduce */
+
+/* .main_introduce {
+    background: #f9f9f9;
+} */
+
+.main_introduce .inner {
+    width: 1200px;
+    margin: auto;
+}
+
+.main_introduce .inner .intro {
+    text-align: center;
+}
+
+.main_introduce .inner .intro span {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+.main_introduce .inner .intro p {
+    margin: 0 0 75px 0;
+}
+
+.main_introduce .inner .banner {
+    display: flex;
+    justify-content: space-between;
+    background: #f7f3f2;
+}
+
+.main_introduce .inner .banner figure {
+    width: 600px;
+    height: 412px;
+}
+
+.main_introduce .inner .banner img {
+    width: 100%;
+    height: 100%;
+}
+
+.main_introduce .inner .banner .info {
+    position: relative;
+    width: 550px;
+    margin: 50px;
+}
+
+.main_introduce .inner .banner .new {
+    display: inline-block;
+    background: #007fa8;
+    color: #fff;
+    padding: 4px 5px;
+    font-size: 11px;
+    text-align: center;
+
+    margin: 0 0 10px 0;
+}
+
+.main_introduce .inner .banner .info .car_name {
+    font-size: 40px;
+    font-weight: 700;
+
+    margin: 0 0 15px 0;
+}
+
+.main_introduce .inner .banner .info .car_txt {
+    margin: 0 0 40px 0;
+}
+
+.main_introduce .inner .banner .info a {
+    background: #002c5f;
+    color: #fff;
+    padding: 5px 20px;
+}
+
+
+.main_introduce .inner .banner .info figure {
+    position: absolute;
+    /* width: 100%;
+    height: 100%; */
+    width: 200px;
+    height: 100px;
+    bottom: 0;
+    right: 0;
+}
