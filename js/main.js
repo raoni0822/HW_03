@@ -20,7 +20,7 @@ $(function () {
 
     $('.mainSlide').slick({
         dots: true,
-        autoplay: true,
+        autoplay: false,
         pauseOnHover: false,
         pauseOnFocus: false,
     });
@@ -30,6 +30,10 @@ $(function () {
         sct > 0 ? $('.header').addClass('on') : $('.header').removeClass('on');
     })
 
+    $('.app_slide').slick({
+        slidesToScroll: 2,
+        slidesToShow: 2,
+    });
 
 
 })
