@@ -8,9 +8,9 @@ $(function () {
             }
         },
 
-
-
     });
+
+
 
 
     $('.mainSlide').on('init afterChange', function () {
